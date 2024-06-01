@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* ป้องกันการเลื่อนหน้าจอไปทางขวา */
-    background-color: #FDF6E3; /* สีพื้นหลังที่อบอุ่น */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #FDF6E3; /* Warm background color */
 }
 
 .header {
@@ -30,22 +30,22 @@ body {
     width: 100%;
     z-index: 1000; 
     display: flex;
-    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    justify-content: center; /* Center align */
     align-items: center;
-    padding: 0 10px; /* เพิ่ม padding เพื่อไม่ให้ชนขอบ */
-    flex-wrap: nowrap; /* ป้องกันการ wrap */
+    padding: 0 10px; /* Add padding to avoid edges */
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .navbar a {
     display: block;
     color: white;
     text-align: center;
-    padding: 10px 15px; /* ปรับ padding */
+    padding: 10px 15px; /* Adjust padding */
     text-decoration: none;
-    font-size: 20px; /* เพิ่มขนาด font */
-    flex: 1; /* ให้แต่ละเมนูใช้พื้นที่เท่ากัน */
-    text-shadow: 2px 2px 4px black; /* เพิ่มเอฟเฟกต์ขอบดำ */
-    border: 1px solid black; /* เพิ่มขอบสีดำ */
+    font-size: 20px; /* Increase font size */
+    flex: 1; /* Each menu takes equal space */
+    text-shadow: 2px 2px 4px black; /* Add black shadow */
+    border: 1px solid black; /* Add black border */
 }
 
 .navbar a:hover {
@@ -55,15 +55,15 @@ body {
 
 .notification-box {
     position: fixed;
-    top: 150px; /* ปรับตำแหน่งตามต้องการ */
-    right: 25px; /* จัดให้อยู่ขอบขวา */
+    top: 150px; /* Adjust as needed */
+    right: 25px; /* Right edge alignment */
     background-color: white;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    z-index: 2000; /* ให้อยู่เหนือทุกอย่าง */
+    z-index: 2000; /* Above all elements */
     display: flex;
-    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    align-items: center; /* Vertical center alignment */
     cursor: pointer;
 }
 
@@ -79,19 +79,18 @@ body {
 
 .main-content {
     padding: 20px;
-    margin-top: 20px; /* ลดขนาดของ margin-top ลง */
+    margin-top: 20px; /* Reduce top margin */
 }
 
 .image-container {
     text-align: center;
-    margin-top: -40px; /* เลื่อนภาพขึ้นมา */
+    margin-top: -40px; /* Move image up */
 }
 
 .image-container img {
     width: 100%;
-    max-width: 1600px; /* เพิ่มขนาด maximum width */
+    max-width: 1600px; /* Max width */
     height: auto;
-    filter: brightness(110%) contrast(120%); /* ทำให้ภาพชัดขึ้น */
 }
 
 .main-content .content {
@@ -100,9 +99,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin: 40px auto 0 auto; /* ปรับ margin-top เพื่อเลื่อนลง */
+    margin: 40px 0 0 0; /* Adjust top margin */
     position: relative;
     z-index: 2;
+    margin-left: 50px; /* Align the content to the left */
 }
 
 .main-content .content h1 {
@@ -115,11 +115,22 @@ body {
     line-height: 1.6;
 }
 
+.about-me-image {
+    text-align: center;
+    margin-top: -231px; /* Adjust this value to move the image closer to the blue line */
+}
+
+.about-me-image img {
+    width: 100%;
+    max-width: 1600px; /* Match the width of the above image */
+    height: auto;
+}
+
 .contact-us {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 2000; /* ปรับ z-index ให้อยู่เหนือเส้น */
+    z-index: 2000; /* Above the line */
 }
 
 .contact-us a {
@@ -138,28 +149,39 @@ body {
 
 .horizontal-line {
     width: 100%;
-    height: 50px; /* ปรับความสูงได้ตามต้องการ */
+    height: 100px; /* Increase height to ensure coverage */
     position: relative;
     z-index: 1;
-    margin-top: 50px; /* เพิ่ม margin-top เพื่อขยับเส้นสีฟ้า */
+    margin-top: -20px; /* Move closer to the image */
 }
 
-.yellow-line {
-    background-color: #FFD700;
-    z-index: 1;
+.horizontal-line-border {
+    background-color: #FFD700; /* Yellow border color */
+    position: absolute;
+    top: -10px;
+    left: 0; /* Extend to the left edge */
+    width: 100%;
+    height: calc(100% + 10px); /* Adjust height */
+    clip-path: polygon(0 0, 0 100%, 100% 35%, 100% 0); /* Adjust the slope to match blue line */
+    z-index: 0; /* Ensure it is behind the blue line */
 }
 
 .blue-line {
     background-color: #00A3FF;
     position: relative;
-    top: 0px; /* ตั้งค่าที่ 0 ไม่ให้เลื่อนขึ้น */
-    z-index: 2;
-    padding-left: 10px; /* ระยะห่างจากขอบ */
-    font-size: 24px; /* ขนาดฟอนต์ */
-    line-height: 50px; /* แนวเส้นและข้อความตรงกัน */
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /* ปรับรูปร่างให้เหมือนตัวอย่าง */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust height */
+    clip-path: polygon(0 0, 0 100%, 100% 35%, 100% 0); /* Adjust the slope to make left side wider and right side narrower */
     color: white;
     text-shadow: 2px 2px 4px black;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 50px;
+    z-index: 1; /* Ensure it is above the yellow border */
 }
 
 * {
