@@ -1,2 +1,0 @@
-# Resume
-by Mr.Paramaet
