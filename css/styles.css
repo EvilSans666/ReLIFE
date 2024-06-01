@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #000;
+    background-image: url('../picture/Login_BG.jpg'); /* ระบุเส้นทางของภาพพื้นหลัง */
+    background-size: contain; /* ใช้ contain เพื่อให้ภาพพอดีกับหน้าจอ */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    top: 60px; /* ปรับตำแหน่งฟอร์มตามที่ต้องการ */
+    left: -250px; /* ปรับตำแหน่งฟอร์มตามที่ต้องการ */
+}
+
+.login-form h2 {
+    color: black; /* เปลี่ยนสีตัวอักษรเป็นสีดำ */
+}
+
+.login-form input {
+    width: 280px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #00A3FF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.additional-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.additional-links a {
+    color: #00A3FF;
+    text-decoration: none;
+    font-size: 14px;
+    flex: 1;
+}
+
+.forgot-password {
+    text-align: left;
+}
+
+.register {
+    text-align: right;
+}
